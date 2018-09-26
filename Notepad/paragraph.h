@@ -109,6 +109,7 @@ public:
 			string s;
 			in >> s;
 			p->set_next(new Paragraph(s));
+			p->get_next()->set_prev(p);
 			p = p->get_next();
 		}
 		p = tmp->get_next();
